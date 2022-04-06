@@ -1,4 +1,4 @@
-#include "util/so_stdio.h"
+#include "so_stdio.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
@@ -28,6 +28,7 @@ typedef struct _so_file {
 SO_FILE *so_fopen(const char *pathname, const char *mode)
 {
 	SO_FILE *ret = (SO_FILE *) malloc(sizeof(SO_FILE));
+
 	if (ret == NULL)
 		return NULL;
 
